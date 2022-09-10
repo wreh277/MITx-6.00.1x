@@ -20,3 +20,22 @@ for i in range(0,len(s)):
         orden0=orden1
         palabra1=s[i]
 print("Longest substring in alphabetical order is:",palabra0)
+
+
+#otro enfoque mas limpio utilizando la propiedad de los strings:
+s="alfjljabc"
+letra=s[0]
+letra1=s[0]
+for i in range(len(s)-1):
+    print("letra   "+letra)
+    print(letra1)
+    if s[i+1]>=s[i]:
+        letra1+=s[i+1]
+        if len(letra1)>len(letra):
+            letra=letra1
+            print("yes")
+    else:
+        letra1=s[i+1]
+print(letra)
+
+#ambos dan lo mismo
